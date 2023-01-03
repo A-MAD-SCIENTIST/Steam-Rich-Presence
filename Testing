@@ -1,0 +1,12 @@
+using Steamworks;
+
+// Initialize Steamworks
+if (!SteamAPI.Init())
+{
+    Console.WriteLine("Error initializing SteamAPI");
+    return;
+}
+
+// Set the rich presence information
+SteamFriends.SetRichPresence("status", "Playing");
+SteamFriends.SetRichPresence("mode", "Mode Name");
